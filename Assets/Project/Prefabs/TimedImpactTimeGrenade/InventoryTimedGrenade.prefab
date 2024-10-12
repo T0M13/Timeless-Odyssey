@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5095765701364992888
+--- !u!1 &5932954101294371449
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,74 +8,70 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1992954584287352711}
-  - component: {fileID: -1680203377894153563}
-  - component: {fileID: 6448979677206827397}
-  - component: {fileID: 9222709744953181937}
-  - component: {fileID: 3739965852447870947}
-  - component: {fileID: 5759487826537364637}
-  m_Layer: 10
-  m_Name: ImpactTimeGrenade
+  - component: {fileID: 137723509262163916}
+  - component: {fileID: 5984052795047218435}
+  - component: {fileID: 3192195349026628075}
+  - component: {fileID: 258505116233547337}
+  - component: {fileID: 4406191462945084625}
+  m_Layer: 8
+  m_Name: InventoryTimedGrenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1992954584287352711
+--- !u!4 &137723509262163916
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
+  m_GameObject: {fileID: 5932954101294371449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1680203377894153563
+--- !u!114 &5984052795047218435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
+  m_GameObject: {fileID: 5932954101294371449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e78e1c54d978544a9856e8c2542d42, type: 3}
+  m_Script: {fileID: 11500000, guid: fc2980f2641153449ba14b1416c55706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 8
-  explosionForce: 2700
-  timeRadius: 17
-  slowFactor: 0.1
-  effectDuration: 15
-  timeDilationDelay: 0.1
-  timeSpherePrefab: {fileID: 5095765701364992888, guid: b08a9fb81cc34ed4ea1f5ef6afd52079,
+  inventoryParent: {fileID: 0}
+  toolPrefab: {fileID: 5095765701364992888, guid: 6e1787a6143b5ff4ca9bf11e62e09e82,
     type: 3}
-  timeSphere: {fileID: 0}
-  showGizmos: 1
-  hasExploded: 0
-  grenadeCollider: {fileID: 0}
-  grenadeRenderer: {fileID: 0}
---- !u!33 &6448979677206827397
+  throwForce: 15
+  dropForce: 2
+  grenadePrefab: {fileID: 5095765701364992888, guid: 490c230c4d6cc0044b2ebc07f412fdaa,
+    type: 3}
+  grenadeTimeScale: 0.1
+  timeEffectDuration: 5
+  timeDilationDelay: 0
+--- !u!33 &3192195349026628075
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
+  m_GameObject: {fileID: 5932954101294371449}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &9222709744953181937
+--- !u!23 &258505116233547337
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
+  m_GameObject: {fileID: 5932954101294371449}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -111,13 +107,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3739965852447870947
+--- !u!135 &4406191462945084625
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
+  m_GameObject: {fileID: 5932954101294371449}
   m_Material: {fileID: 13400000, guid: 71c23f928f59b7e4598d8230d6910d01, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -132,30 +128,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5759487826537364637
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095765701364992888}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1

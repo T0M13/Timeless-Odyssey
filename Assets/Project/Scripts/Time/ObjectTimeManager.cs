@@ -56,6 +56,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     private void StoreOriginalData()
     {
+        if (rb == null) return;
         originalVelocity = rb.velocity;
         originalAngularVelocity = rb.angularVelocity;
         originalDrag = rb.drag;
@@ -67,6 +68,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     private void RestoreOriginalData()
     {
+        if(rb == null) return;
         rb.velocity = originalVelocity;
         rb.angularVelocity = originalAngularVelocity;
         rb.drag = originalDrag;

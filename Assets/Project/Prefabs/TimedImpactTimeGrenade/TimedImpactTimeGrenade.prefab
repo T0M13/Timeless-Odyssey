@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992954584287352711}
-  - component: {fileID: -1680203377894153563}
+  - component: {fileID: -2033887983270636501}
+  - component: {fileID: 7936036821583888278}
   - component: {fileID: 6448979677206827397}
   - component: {fileID: 9222709744953181937}
   - component: {fileID: 3739965852447870947}
   - component: {fileID: 5759487826537364637}
   m_Layer: 10
-  m_Name: ImpactTimeGrenade
+  m_Name: TimedImpactTimeGrenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +37,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1680203377894153563
+--- !u!114 &-2033887983270636501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,22 +46,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 5095765701364992888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e78e1c54d978544a9856e8c2542d42, type: 3}
+  m_Script: {fileID: 11500000, guid: 736a59a8722a73640a4ebdb2b7a372b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 8
   explosionForce: 2700
   timeRadius: 17
   slowFactor: 0.1
-  effectDuration: 15
+  effectDuration: 5
   timeDilationDelay: 0.1
   timeSpherePrefab: {fileID: 5095765701364992888, guid: b08a9fb81cc34ed4ea1f5ef6afd52079,
     type: 3}
   timeSphere: {fileID: 0}
+  grenadeThrowTimeScale: 0.1
+  timeThrowEffectDuration: 10
+  timeThrowDilationDelay: 0.1
   showGizmos: 1
   hasExploded: 0
-  grenadeCollider: {fileID: 0}
-  grenadeRenderer: {fileID: 0}
+  grenadeCollider: {fileID: 3739965852447870947}
+  grenadeRenderer: {fileID: 9222709744953181937}
+--- !u!114 &7936036821583888278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095765701364992888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72eb319a967800e4fa7fda75f4fec7dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localTimeScale: 1
+  defaultLocalTimeScale: 1
+  isTimeControlledCurrently: 0
+  rb: {fileID: 5759487826537364637}
+  originalVelocity: {x: 0, y: 0, z: 0}
+  originalAngularVelocity: {x: 0, y: 0, z: 0}
+  originalDrag: 0
+  originalAngularDrag: 0
+  originalUseGravity: 0
+  originalGravity: {x: 0, y: 0, z: 0}
 --- !u!33 &6448979677206827397
 MeshFilter:
   m_ObjectHideFlags: 0

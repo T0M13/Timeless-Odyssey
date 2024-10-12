@@ -42,6 +42,9 @@ public class TimeGrenade : MonoBehaviour
         if (hasExploded) return;
         hasExploded = true;
 
+        // Disable grenade visual and colliders after explosion
+        DisableGrenade();
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider nearbyObject in colliders)
         {
@@ -51,9 +54,6 @@ public class TimeGrenade : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
             }
         }
-
-        // Disable grenade visual and colliders after explosion
-        DisableGrenade();
 
         // Start time dilation after the delay
         StartCoroutine(DelayedTimeDilation());

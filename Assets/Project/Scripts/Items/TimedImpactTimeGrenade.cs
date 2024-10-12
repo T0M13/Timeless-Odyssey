@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpactTimeGrenade : MonoBehaviour
+public class TimedImpactTimeGrenade : MonoBehaviour
 {
     [Header("Explosion Settings")]
     [SerializeField] private float explosionRadius = 5f;
@@ -15,6 +15,11 @@ public class ImpactTimeGrenade : MonoBehaviour
     [SerializeField] private float timeDilationDelay = 1f;
     [SerializeField] private GameObject timeSpherePrefab;
     [SerializeField] private GameObject timeSphere;
+
+    [Header("Time Throw/Drop Scale Settings")]
+    [SerializeField] private float grenadeThrowTimeScale = 0.1f;
+    [SerializeField] private float timeThrowEffectDuration = 5f;
+    [SerializeField] private float timeThrowDilationDelay = 0.2f;
 
     [Header("Visual Gizmo Settings")]
     [SerializeField] private bool showGizmos = true;
@@ -32,7 +37,9 @@ public class ImpactTimeGrenade : MonoBehaviour
     {
         if (hasExploded) return;
         hasExploded = true;
+
         DisableGrenade();
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider nearbyObject in colliders)
         {
@@ -43,7 +50,6 @@ public class ImpactTimeGrenade : MonoBehaviour
             }
         }
 
-        
 
         // Start time dilation after the delay
         StartCoroutine(DelayedTimeDilation());
@@ -73,6 +79,35 @@ public class ImpactTimeGrenade : MonoBehaviour
         if (grenadeRenderer != null) grenadeRenderer.enabled = false;
         if (grenadeCollider != null) grenadeCollider.enabled = false;
     }
+
+    public void StartDelayTimeEffect(GameObject grenade)
+    {
+        StartCoroutine(DelayedTimeEffect(grenade));
+    }
+
+    private IEnumerator DelayedTimeEffect(GameObject grenade)
+    {
+        yield return new WaitForSeconds(timeDilationDelay);
+
+        ApplyTimeEffect(grenade);
+    }
+
+    private void ApplyTimeEffect(GameObject grenade)
+    {
+        ObjectTimeManager timeManager = grenade.GetComponent<ObjectTimeManager>();
+        if (timeManager != null)
+        {
+            timeManager.SetTimeScale(grenadeThrowTimeScale);
+            StartCoroutine(RestoreTimeAfterDuration(timeManager));
+        }
+    }
+
+    private IEnumerator RestoreTimeAfterDuration(ObjectTimeManager timeManager)
+    {
+        yield return new WaitForSeconds(timeThrowEffectDuration);
+        timeManager.ResetTimeScale();
+    }
+
 
     private void OnDrawGizmosSelected()
     {
