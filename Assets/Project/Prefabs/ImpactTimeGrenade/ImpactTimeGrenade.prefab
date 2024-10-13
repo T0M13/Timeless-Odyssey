@@ -59,8 +59,8 @@ MonoBehaviour:
   timeSphere: {fileID: 0}
   showGizmos: 1
   hasExploded: 0
-  grenadeCollider: {fileID: 0}
-  grenadeRenderer: {fileID: 0}
+  grenadeCollider: {fileID: 3739965852447870947}
+  grenadeRenderer: {fileID: 9222709744953181937}
 --- !u!33 &6448979677206827397
 MeshFilter:
   m_ObjectHideFlags: 0

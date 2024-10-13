@@ -69,6 +69,7 @@ public class TimeGrenade : MonoBehaviour
     {
         timeSphere = Instantiate(timeSpherePrefab, transform.position, Quaternion.identity);
         var timeSphereComponent = timeSphere.GetComponent<TimedSphere>();
+        timeSphereComponent.SetMaterial();
         timeSphereComponent.SetSize(timeRadius);
         timeSphereComponent.SetTimeScale(slowFactor);
         timeSphereComponent.SetDuration(effectDuration);

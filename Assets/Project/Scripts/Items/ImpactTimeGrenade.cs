@@ -43,8 +43,6 @@ public class ImpactTimeGrenade : MonoBehaviour
             }
         }
 
-        
-
         // Start time dilation after the delay
         StartCoroutine(DelayedTimeDilation());
     }
@@ -59,6 +57,7 @@ public class ImpactTimeGrenade : MonoBehaviour
     {
         timeSphere = Instantiate(timeSpherePrefab, transform.position, Quaternion.identity);
         var timeSphereComponent = timeSphere.GetComponent<TimedSphere>();
+        timeSphereComponent.SetMaterial();
         timeSphereComponent.SetSize(timeRadius);
         timeSphereComponent.SetTimeScale(slowFactor);
         timeSphereComponent.SetDuration(effectDuration);
@@ -69,7 +68,6 @@ public class ImpactTimeGrenade : MonoBehaviour
 
     private void DisableGrenade()
     {
-        // Disable grenade renderer and colliders
         if (grenadeRenderer != null) grenadeRenderer.enabled = false;
         if (grenadeCollider != null) grenadeCollider.enabled = false;
     }
@@ -78,11 +76,9 @@ public class ImpactTimeGrenade : MonoBehaviour
     {
         if (showGizmos)
         {
-            // Visualize explosion radius
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, explosionRadius);
 
-            // Visualize time dilation radius
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, timeRadius);
         }
