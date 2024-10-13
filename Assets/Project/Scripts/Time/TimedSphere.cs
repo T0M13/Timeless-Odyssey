@@ -10,6 +10,7 @@ public class TimedSphere : MonoBehaviour
     [SerializeField] private float effectDuration = 5f;
     [SerializeField] private bool showGizmos = true;
     private HashSet<ObjectTimeManager> objectsInsideSphere = new HashSet<ObjectTimeManager>();
+    private Coroutine restoreCoroutine;
 
     [Header("Growth Settings")]
     [SerializeField] private float growthDuration = 1f;
@@ -17,9 +18,9 @@ public class TimedSphere : MonoBehaviour
     [SerializeField] private bool isGrowing = true;
     [SerializeField]
     private AnimationCurve growthCurve = new AnimationCurve(
-     new Keyframe(0f, 0f),  
-     new Keyframe(0.7f, 0.9f),  
-     new Keyframe(1f, 1f));  
+     new Keyframe(0f, 0f),
+     new Keyframe(0.7f, 0.9f),
+     new Keyframe(1f, 1f));
 
     [Header("Shader Settings")]
     [SerializeField] private Renderer bubbleRenderer;
@@ -42,7 +43,7 @@ public class TimedSphere : MonoBehaviour
     public void SetSize(float size)
     {
         sphereSize = size;
-        UpdateBubbleScaleSize(0f);  
+        UpdateBubbleScaleSize(0f);
     }
 
     public void SetDuration(float duration)
@@ -52,6 +53,9 @@ public class TimedSphere : MonoBehaviour
 
     public void SetTimeDilation()
     {
+        if (restoreCoroutine != null)
+            StopCoroutine(restoreCoroutine);
+
         Collider[] objectsInRange = Physics.OverlapSphere(transform.position, sphereSize);
 
         foreach (Collider col in objectsInRange)
@@ -61,7 +65,7 @@ public class TimedSphere : MonoBehaviour
             {
                 timeManager.SetTimeScale(timeScaleInsideSphere);
                 objectsInsideSphere.Add(timeManager);
-                StartCoroutine(RestoreTimeAfterDuration(timeManager));
+                restoreCoroutine = StartCoroutine(RestoreTimeAfterDuration(timeManager));
             }
         }
     }
@@ -80,8 +84,8 @@ public class TimedSphere : MonoBehaviour
         {
             currentGrowthTime += Time.deltaTime;
             float progress = Mathf.Clamp01(currentGrowthTime / growthDuration);
-            float curveValue = growthCurve.Evaluate(progress); 
-            float size = Mathf.Lerp(0f, sphereSize, curveValue); 
+            float curveValue = growthCurve.Evaluate(progress);
+            float size = Mathf.Lerp(0f, sphereSize, curveValue);
             UpdateBubbleScaleSize(size);
 
             // Stop growing when done
