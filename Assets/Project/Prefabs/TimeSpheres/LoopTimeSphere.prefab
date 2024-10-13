@@ -48,9 +48,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeScaleInsideSphere: 0.1
   sphereSize: 10
-  startDuration: 1
+  effectDuration: 0
   isInDilation: 0
+  setDilationOnStart: 1
   showGizmos: 1
+  objectsInsideSphere: []
+  sphereSizeDistanceOffsetThreshold: 1
   growthDuration: 0.2
   currentGrowthTime: 0
   isGrowing: 0

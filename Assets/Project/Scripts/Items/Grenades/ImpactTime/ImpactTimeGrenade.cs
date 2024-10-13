@@ -26,12 +26,9 @@ public class ImpactTimeGrenade : ImpactGrenade
     public virtual void SetTimeDilation()
     {
         timeSphere = Instantiate(timeSpherePrefab, transform.position, Quaternion.identity);
-        var timeSphereComponent = timeSphere.GetComponent<TimedSphere>();
-        timeSphereComponent.SetMaterial();
-        timeSphereComponent.SetSize(timeEffectRadius);
-        timeSphereComponent.SetTimeScale(slowFactor);
-        timeSphereComponent.SetDuration(effectDuration);
-        timeSphereComponent.SetTimeDilation();
+        var timeSphereComponent = timeSphere.GetComponent<TimeSphere>();
+        timeSphereComponent.SetSphereStats(timeEffectRadius, slowFactor, effectDuration);
+        timeSphereComponent.InitiateTimeSphere();
         Destroy(gameObject);
     }
 

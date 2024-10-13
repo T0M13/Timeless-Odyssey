@@ -49,22 +49,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736a59a8722a73640a4ebdb2b7a372b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grenadeCollider: {fileID: 3739965852447870947}
+  grenadeRenderer: {fileID: 9222709744953181937}
   explosionRadius: 8
   explosionForce: 2700
-  timeRadius: 17
+  explosionDelay: 3
+  showGizmos: 1
+  timeEffectRadius: 10
   slowFactor: 0.1
   effectDuration: 5
   timeDilationDelay: 0.1
-  timeSpherePrefab: {fileID: 5095765701364992888, guid: b08a9fb81cc34ed4ea1f5ef6afd52079,
+  timeSpherePrefab: {fileID: 5095765701364992888, guid: 23099510803ab964da311dd61fc0ec2a,
     type: 3}
   timeSphere: {fileID: 0}
-  grenadeThrowTimeScale: 0.1
-  timeThrowEffectDuration: 10
-  timeThrowDilationDelay: 0.1
-  showGizmos: 1
-  hasExploded: 0
-  grenadeCollider: {fileID: 3739965852447870947}
-  grenadeRenderer: {fileID: 9222709744953181937}
+  grenadeThrowSlowFactor: 0.1
+  throwTimeEffectDuration: 5
+  throwTimeDilationDelay: 0.2
 --- !u!114 &7936036821583888278
 MonoBehaviour:
   m_ObjectHideFlags: 0

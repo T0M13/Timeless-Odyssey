@@ -48,19 +48,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e78e1c54d978544a9856e8c2542d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grenadeCollider: {fileID: 3739965852447870947}
+  grenadeRenderer: {fileID: 9222709744953181937}
   explosionRadius: 8
   explosionForce: 2700
-  timeRadius: 17
+  explosionDelay: 3
+  showGizmos: 1
+  timeEffectRadius: 10
   slowFactor: 0.1
   effectDuration: 15
   timeDilationDelay: 0.1
-  timeSpherePrefab: {fileID: 5095765701364992888, guid: b08a9fb81cc34ed4ea1f5ef6afd52079,
+  timeSpherePrefab: {fileID: 5095765701364992888, guid: 23099510803ab964da311dd61fc0ec2a,
     type: 3}
   timeSphere: {fileID: 0}
-  showGizmos: 1
-  hasExploded: 0
-  grenadeCollider: {fileID: 3739965852447870947}
-  grenadeRenderer: {fileID: 9222709744953181937}
 --- !u!33 &6448979677206827397
 MeshFilter:
   m_ObjectHideFlags: 0

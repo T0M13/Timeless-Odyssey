@@ -7,10 +7,12 @@ public class TimeSphere : MonoBehaviour
     [Header("Time Sphere Settings")]
     [SerializeField] private float timeScaleInsideSphere = 0.5f;
     [SerializeField] private float sphereSize = 5f;
-    [SerializeField] private float startDuration = .1f;
+    [SerializeField] private float effectDuration = 5f;
     [SerializeField] private bool isInDilation = false;
+    [SerializeField] private bool setDilationOnStart = false;
     [SerializeField] private bool showGizmos = true;
-    private HashSet<ObjectTimeManager> objectsInsideSphere = new HashSet<ObjectTimeManager>();
+    [SerializeField] private List<ObjectTimeManager> objectsInsideSphere = new List<ObjectTimeManager>();
+    [SerializeField] private float sphereSizeDistanceOffsetThreshold = 1f;
 
     [Header("Growth Settings")]
     [SerializeField] private float growthDuration = 1f;
@@ -26,39 +28,77 @@ public class TimeSphere : MonoBehaviour
     [SerializeField] private Renderer bubbleRenderer;
     [SerializeField] private Material bubbleMaterialInstance;
 
+    private void Start()
+    {
+        if (!setDilationOnStart) return;
+        InitiateTimeSphere();
+    }
 
-    public float SphereSize { get => sphereSize; set => sphereSize = value; }
-    public float TimeScaleInsideSphere { get => timeScaleInsideSphere; set => timeScaleInsideSphere = value; }
-
-    public void SetMaterial()
+    private void SetMaterial()
     {
         bubbleMaterialInstance = bubbleRenderer.material;
     }
 
-    public void SetTimeScale(float scale)
+    private void SetTimeScale(float scale)
     {
         timeScaleInsideSphere = scale;
     }
 
-    public void SetSize(float size)
+    private void SetSize(float size)
     {
         sphereSize = size;
         UpdateBubbleScaleSize(0f);
     }
 
-    private void Start()
+    private void SetDuration(float duration)
     {
-        StartCoroutine(WaitBeforeDilation());
+        effectDuration = duration;
     }
 
-    private IEnumerator WaitBeforeDilation()
+    public void SetSphereStats(float size, float slowFactor, float effectDuration)
     {
+        SetSize(size);
+        SetTimeScale(slowFactor);
+        SetDuration(effectDuration);
+    }
+
+    public void InitiateTimeSphere()
+    {
+        SetMaterial();
         bubbleMaterialInstance = bubbleRenderer.material;
         UpdateBubbleScaleSize(0f);
-        yield return new WaitForSeconds(startDuration);
         isGrowing = true;
         isInDilation = true;
+
+        if (effectDuration > 0)
+            StartCoroutine(RestoreTimeAfterDuration());
     }
+
+    private IEnumerator RestoreTimeAfterDuration()
+    {
+        yield return new WaitForSeconds(effectDuration);
+
+        if (objectsInsideSphere.Count > 0)
+        {
+            List<ObjectTimeManager> objectsToRemove = new List<ObjectTimeManager>();
+
+            foreach (var timeManager in objectsInsideSphere)
+            {
+                if (timeManager == null) continue;
+
+                timeManager.ResetTimeScale();
+                objectsToRemove.Add(timeManager);
+            }
+
+            foreach (var timeManager in objectsToRemove)
+            {
+                objectsInsideSphere.Remove(timeManager);
+            }
+        }
+
+        Destroy(gameObject);
+    }
+
 
     private void Update()
     {
@@ -66,8 +106,8 @@ public class TimeSphere : MonoBehaviour
         {
             currentGrowthTime += Time.deltaTime;
             float progress = Mathf.Clamp01(currentGrowthTime / growthDuration);
-            float curveValue = growthCurve.Evaluate(progress);  // Use the custom curve
-            float size = Mathf.Lerp(0f, sphereSize, curveValue);  // Apply the curve to the size
+            float curveValue = growthCurve.Evaluate(progress);
+            float size = Mathf.Lerp(0f, sphereSize, curveValue);
             UpdateBubbleScaleSize(size);
 
             // Stop growing when done
@@ -99,28 +139,32 @@ public class TimeSphere : MonoBehaviour
 
     private void CheckObjectsStillInRange()
     {
-        List<ObjectTimeManager> objectsToRemove = new List<ObjectTimeManager>();
-
-        foreach (var timeManager in objectsInsideSphere)
+        if (objectsInsideSphere.Count > 0)
         {
-            if (timeManager == null) continue;
+            List<ObjectTimeManager> objectsToRemove = new List<ObjectTimeManager>();
 
-            if (Vector3.Distance(timeManager.transform.position, transform.position) > sphereSize)
+            foreach (var timeManager in objectsInsideSphere)
             {
-                timeManager.ResetTimeScale();
-                objectsToRemove.Add(timeManager);
-            }
-        }
+                if (timeManager == null) continue;
 
-        foreach (var timeManager in objectsToRemove)
-        {
-            objectsInsideSphere.Remove(timeManager);
+                if (Vector3.Distance(timeManager.transform.position, transform.position) >= sphereSize * sphereSizeDistanceOffsetThreshold)
+                {
+                    timeManager.ResetTimeScale();
+                    objectsToRemove.Add(timeManager);  
+                }
+            }
+
+            foreach (var timeManager in objectsToRemove)
+            {
+                objectsInsideSphere.Remove(timeManager);
+            }
+
         }
     }
 
     private void UpdateBubbleScaleSize(float size)
     {
-        Vector3 newSize = new Vector3(size , size , size);
+        Vector3 newSize = new Vector3(size, size, size);
         transform.localScale = newSize;
     }
 
@@ -130,6 +174,9 @@ public class TimeSphere : MonoBehaviour
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, sphereSize);
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position, sphereSize * sphereSizeDistanceOffsetThreshold);
+
         }
     }
 
