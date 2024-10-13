@@ -43,7 +43,7 @@ public class TimeSphere : MonoBehaviour
     public void SetSize(float size)
     {
         sphereSize = size;
-        UpdateBubbleShaderSize(0f);
+        UpdateBubbleScaleSize(0f);
     }
 
     private void Start()
@@ -54,7 +54,7 @@ public class TimeSphere : MonoBehaviour
     private IEnumerator WaitBeforeDilation()
     {
         bubbleMaterialInstance = bubbleRenderer.material;
-        UpdateBubbleShaderSize(0f);
+        UpdateBubbleScaleSize(0f);
         yield return new WaitForSeconds(startDuration);
         isGrowing = true;
         isInDilation = true;
@@ -68,7 +68,7 @@ public class TimeSphere : MonoBehaviour
             float progress = Mathf.Clamp01(currentGrowthTime / growthDuration);
             float curveValue = growthCurve.Evaluate(progress);  // Use the custom curve
             float size = Mathf.Lerp(0f, sphereSize, curveValue);  // Apply the curve to the size
-            UpdateBubbleShaderSize(size);
+            UpdateBubbleScaleSize(size);
 
             // Stop growing when done
             if (progress >= 1f)
@@ -118,13 +118,10 @@ public class TimeSphere : MonoBehaviour
         }
     }
 
-    private void UpdateBubbleShaderSize(float size)
+    private void UpdateBubbleScaleSize(float size)
     {
-        if (bubbleMaterialInstance != null)
-        {
-            Vector3 newSize = new Vector3(size * 2, size * 2, size * 2);
-            bubbleMaterialInstance.SetVector("_Size", newSize);
-        }
+        Vector3 newSize = new Vector3(size , size , size);
+        transform.localScale = newSize;
     }
 
     private void OnDrawGizmosSelected()
@@ -138,9 +135,7 @@ public class TimeSphere : MonoBehaviour
 
     private void OnValidate()
     {
-        if (bubbleMaterialInstance != null)
-        {
-            UpdateBubbleShaderSize(sphereSize);
-        }
+        UpdateBubbleScaleSize(sphereSize);
     }
+
 }

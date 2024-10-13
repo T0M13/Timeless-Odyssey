@@ -42,7 +42,7 @@ public class TimedSphere : MonoBehaviour
     public void SetSize(float size)
     {
         sphereSize = size;
-        UpdateBubbleShaderSize(0f);  
+        UpdateBubbleScaleSize(0f);  
     }
 
     public void SetDuration(float duration)
@@ -80,9 +80,9 @@ public class TimedSphere : MonoBehaviour
         {
             currentGrowthTime += Time.deltaTime;
             float progress = Mathf.Clamp01(currentGrowthTime / growthDuration);
-            float curveValue = growthCurve.Evaluate(progress);  // Use the custom curve
-            float size = Mathf.Lerp(0f, sphereSize, curveValue);  // Apply the curve to the size
-            UpdateBubbleShaderSize(size);
+            float curveValue = growthCurve.Evaluate(progress); 
+            float size = Mathf.Lerp(0f, sphereSize, curveValue); 
+            UpdateBubbleScaleSize(size);
 
             // Stop growing when done
             if (progress >= 1f)
@@ -114,13 +114,10 @@ public class TimedSphere : MonoBehaviour
         }
     }
 
-    private void UpdateBubbleShaderSize(float size)
+    private void UpdateBubbleScaleSize(float size)
     {
-        if (bubbleMaterialInstance != null)
-        {
-            Vector3 newSize = new Vector3(size * 2, size * 2, size * 2);
-            bubbleMaterialInstance.SetVector("_Size", newSize);
-        }
+        Vector3 newSize = new Vector3(size, size, size);
+        transform.localScale = newSize;
     }
 
     private void OnDrawGizmosSelected()
@@ -131,12 +128,9 @@ public class TimedSphere : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position, sphereSize);
         }
     }
-
     private void OnValidate()
     {
-        if (bubbleMaterialInstance != null)
-        {
-            UpdateBubbleShaderSize(sphereSize); 
-        }
+        UpdateBubbleScaleSize(sphereSize);
     }
+
 }

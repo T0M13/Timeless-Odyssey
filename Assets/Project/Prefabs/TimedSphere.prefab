@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,6 +51,8 @@ MonoBehaviour:
   effectDuration: 5
   showGizmos: 1
   growthDuration: 0.2
+  currentGrowthTime: 0
+  isGrowing: 1
   growthCurve:
     serializedVersion: 2
     m_Curve:
@@ -94,7 +96,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   bubbleRenderer: {fileID: 5659291735456444266}
-  bubbleMaterial: {fileID: 2100000, guid: b37067dc6cd271e4493f62e52984ec9c, type: 2}
+  bubbleMaterialInstance: {fileID: 0}
 --- !u!33 &5111338062185763067
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -102,7 +104,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5095765701364992888}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 5268025629903592654, guid: 06a8463205f0332408685802ef4c3ada, type: 3}
 --- !u!23 &5659291735456444266
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -123,7 +125,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b37067dc6cd271e4493f62e52984ec9c, type: 2}
+  - {fileID: -876546973899608171, guid: f49cbaceab92928489c2f921a3d38cb9, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
