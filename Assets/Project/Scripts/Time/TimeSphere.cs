@@ -5,64 +5,64 @@ using UnityEngine;
 public class TimeSphere : MonoBehaviour
 {
     [Header("Time Sphere Settings")]
-    [SerializeField] private float timeScaleInsideSphere = 0.5f;
-    [SerializeField] private float sphereSize = 5f;
-    [SerializeField] private float effectDuration = 5f;
-    [SerializeField] private bool isInDilation = false;
-    [SerializeField] private bool setDilationOnStart = false;
-    [SerializeField] private bool showGizmos = true;
-    [SerializeField] private List<ObjectTimeManager> objectsInsideSphere = new List<ObjectTimeManager>();
-    [SerializeField] private float sphereSizeDistanceOffsetThreshold = 1f;
+    [SerializeField] protected float timeScaleInsideSphere = 0.5f;
+    [SerializeField] protected float sphereSize = 5f;
+    [SerializeField] protected float effectDuration = 5f;
+    [SerializeField] protected bool isInDilation = false;
+    [SerializeField] protected bool setDilationOnStart = false;
+    [SerializeField] protected bool showGizmos = true;
+    [SerializeField] protected List<ObjectTimeManager> objectsInsideSphere = new List<ObjectTimeManager>();
+    [SerializeField] protected float sphereSizeDistanceOffsetThreshold = 1f;
 
     [Header("Growth Settings")]
-    [SerializeField] private float growthDuration = 1f;
-    [SerializeField] private float currentGrowthTime = 0f;
-    [SerializeField] private bool isGrowing = false;
+    [SerializeField] protected float growthDuration = 1f;
+    [SerializeField] protected float currentGrowthTime = 0f;
+    [SerializeField] protected bool isGrowing = false;
     [SerializeField]
-    private AnimationCurve growthCurve = new AnimationCurve(
+    protected AnimationCurve growthCurve = new AnimationCurve(
   new Keyframe(0f, 0f),
   new Keyframe(0.7f, 0.9f),
   new Keyframe(1f, 1f));
 
     [Header("Shader Settings")]
-    [SerializeField] private Renderer bubbleRenderer;
-    [SerializeField] private Material bubbleMaterialInstance;
+    [SerializeField] protected Renderer bubbleRenderer;
+    [SerializeField] protected Material bubbleMaterialInstance;
 
-    private void Start()
+    protected virtual void Start()
     {
         if (!setDilationOnStart) return;
         InitiateTimeSphere();
     }
 
-    private void SetMaterial()
+    protected virtual void SetMaterial()
     {
         bubbleMaterialInstance = bubbleRenderer.material;
     }
 
-    private void SetTimeScale(float scale)
+    protected virtual void SetTimeScale(float scale)
     {
         timeScaleInsideSphere = scale;
     }
 
-    private void SetSize(float size)
+    protected virtual void SetSize(float size)
     {
         sphereSize = size;
         UpdateBubbleScaleSize(0f);
     }
 
-    private void SetDuration(float duration)
+    protected virtual void SetDuration(float duration)
     {
         effectDuration = duration;
     }
 
-    public void SetSphereStats(float size, float slowFactor, float effectDuration)
+    public virtual void SetSphereStats(float size, float slowFactor, float effectDuration)
     {
         SetSize(size);
         SetTimeScale(slowFactor);
         SetDuration(effectDuration);
     }
 
-    public void InitiateTimeSphere()
+    public virtual void InitiateTimeSphere()
     {
         SetMaterial();
         bubbleMaterialInstance = bubbleRenderer.material;
@@ -74,7 +74,7 @@ public class TimeSphere : MonoBehaviour
             StartCoroutine(RestoreTimeAfterDuration());
     }
 
-    private IEnumerator RestoreTimeAfterDuration()
+    protected virtual IEnumerator RestoreTimeAfterDuration()
     {
         yield return new WaitForSeconds(effectDuration);
 
@@ -100,7 +100,7 @@ public class TimeSphere : MonoBehaviour
     }
 
 
-    private void Update()
+    protected virtual void Update()
     {
         if (isGrowing)
         {
@@ -122,7 +122,7 @@ public class TimeSphere : MonoBehaviour
         CheckObjectsStillInRange();
     }
 
-    private void SetTimeDilation()
+    protected virtual void SetTimeDilation()
     {
         Collider[] objectsInRange = Physics.OverlapSphere(transform.position, sphereSize);
 
@@ -137,7 +137,7 @@ public class TimeSphere : MonoBehaviour
         }
     }
 
-    private void CheckObjectsStillInRange()
+    protected virtual void CheckObjectsStillInRange()
     {
         if (objectsInsideSphere.Count > 0)
         {
@@ -162,13 +162,13 @@ public class TimeSphere : MonoBehaviour
         }
     }
 
-    private void UpdateBubbleScaleSize(float size)
+    protected virtual void UpdateBubbleScaleSize(float size)
     {
         Vector3 newSize = new Vector3(size, size, size);
         transform.localScale = newSize;
     }
 
-    private void OnDrawGizmosSelected()
+    protected virtual void OnDrawGizmosSelected()
     {
         if (showGizmos)
         {
@@ -180,7 +180,7 @@ public class TimeSphere : MonoBehaviour
         }
     }
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         UpdateBubbleScaleSize(sphereSize);
     }

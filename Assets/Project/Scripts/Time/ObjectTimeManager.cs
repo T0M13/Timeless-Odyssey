@@ -11,7 +11,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     [Header("Rigidbody Settings")]
     [SerializeField] private Rigidbody rb;
-    
+
     [Header("Original Rigidbody Data")]
     [SerializeField] private Vector3 originalVelocity;
     [SerializeField] private Vector3 originalAngularVelocity;
@@ -35,10 +35,10 @@ public class ObjectTimeManager : MonoBehaviour
 
     public void SetTimeScale(float newTimeScale)
     {
-        if(!CanBeTimeControlled) return;
+        if (!CanBeTimeControlled) return;
         if (!isTimeControlledCurrently)
             StoreOriginalData();
-            
+
         isTimeControlledCurrently = true;
         localTimeScale = newTimeScale;
         UpdateRigidbody();
@@ -46,7 +46,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     public void ResetTimeScale()
     {
-        if(!CanBeTimeControlled) return;
+        if (!CanBeTimeControlled) return;
 
         isTimeControlledCurrently = false;
         RestoreOriginalData();
@@ -61,8 +61,14 @@ public class ObjectTimeManager : MonoBehaviour
     private void StoreOriginalData()
     {
         if (rb == null) return;
-        originalVelocity = rb.velocity;
-        originalAngularVelocity = rb.angularVelocity;
+
+        // Only store velocity if the Rigidbody is not kinematic
+        if (!rb.isKinematic)
+        {
+            originalVelocity = rb.velocity;
+            originalAngularVelocity = rb.angularVelocity;
+        }
+
         originalDrag = rb.drag;
         originalAngularDrag = rb.angularDrag;
         originalUseGravity = rb.useGravity;
@@ -72,9 +78,15 @@ public class ObjectTimeManager : MonoBehaviour
 
     private void RestoreOriginalData()
     {
-        if(rb == null) return;
-        rb.velocity = originalVelocity;
-        rb.angularVelocity = originalAngularVelocity;
+        if (rb == null) return;
+
+        // Only restore velocity if the Rigidbody is not kinematic
+        if (!rb.isKinematic)
+        {
+            rb.velocity = originalVelocity;
+            rb.angularVelocity = originalAngularVelocity;
+        }
+
         rb.drag = originalDrag;
         rb.angularDrag = originalAngularDrag;
         rb.useGravity = originalUseGravity;
@@ -82,8 +94,13 @@ public class ObjectTimeManager : MonoBehaviour
 
     private void ApplyTimeScale()
     {
-        rb.velocity = originalVelocity * localTimeScale;
-        rb.angularVelocity = originalAngularVelocity * localTimeScale;
+        // Only apply velocity scaling if the Rigidbody is not kinematic
+        if (!rb.isKinematic)
+        {
+            rb.velocity = originalVelocity * localTimeScale;
+            rb.angularVelocity = originalAngularVelocity * localTimeScale;
+        }
+
         Vector3 customGravity = originalGravity * localTimeScale;
         rb.AddForce(customGravity, ForceMode.Acceleration);
     }
