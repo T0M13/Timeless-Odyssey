@@ -212,6 +212,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -255,6 +256,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -479,6 +481,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -635,6 +638,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -791,6 +795,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -947,6 +952,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1216,6 +1222,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1259,6 +1266,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1415,6 +1423,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1571,6 +1580,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1727,6 +1737,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -1883,6 +1894,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2114,6 +2126,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2375,6 +2388,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2644,6 +2658,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2687,6 +2702,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2807,6 +2823,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1064520184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &176980219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -4600947042002478438, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: timeDilationDelay
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.996827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2500019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095765701364992888, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_Name
+      value: ImpactTimeGrenadeTool_Freeze (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7a0f985554b5c346939e332ebfd0772, type: 3}
 --- !u!1 &177690955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +2932,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -2999,6 +3089,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -3155,6 +3246,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -3379,6 +3471,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -3535,6 +3628,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -3691,6 +3785,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -3847,6 +3942,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4003,6 +4099,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4265,6 +4362,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4421,6 +4519,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4577,6 +4676,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4733,6 +4833,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -4889,6 +4990,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5045,6 +5147,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5201,6 +5304,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5357,6 +5461,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5513,6 +5618,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5669,6 +5775,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5938,6 +6045,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -5981,6 +6089,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -6137,6 +6246,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -6406,6 +6516,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -6449,6 +6560,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -6791,6 +6903,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -6947,6 +7060,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7103,6 +7217,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7372,6 +7487,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7415,6 +7531,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7571,6 +7688,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7727,6 +7845,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -7883,6 +8002,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8039,6 +8159,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8195,6 +8316,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8351,6 +8473,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8507,6 +8630,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8663,6 +8787,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -8819,6 +8944,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9043,6 +9169,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9199,6 +9326,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9355,6 +9483,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9511,6 +9640,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9667,6 +9797,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9823,6 +9954,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -9943,6 +10075,112 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1064520184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &662764314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662764315}
+  - component: {fileID: 662764318}
+  - component: {fileID: 662764317}
+  - component: {fileID: 662764316}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &662764315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662764314}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.653, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 895090795}
+  m_Father: {fileID: 943678093}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &662764316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662764314}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &662764317
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662764314}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &662764318
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662764314}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &663152981
 GameObject:
   m_ObjectHideFlags: 0
@@ -9979,6 +10217,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -10135,6 +10374,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -10291,6 +10531,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -10447,6 +10688,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -10598,17 +10840,17 @@ PrefabInstance:
     - target: {fileID: 1992954584287352711, guid: 24ee14124b42b4c4fa9994ccd5802e5c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.2
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 1992954584287352711, guid: 24ee14124b42b4c4fa9994ccd5802e5c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1992954584287352711, guid: 24ee14124b42b4c4fa9994ccd5802e5c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 21.4
       objectReference: {fileID: 0}
     - target: {fileID: 1992954584287352711, guid: 24ee14124b42b4c4fa9994ccd5802e5c,
         type: 3}
@@ -10937,6 +11179,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -10980,6 +11223,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11136,6 +11380,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11292,6 +11537,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11448,6 +11694,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11604,6 +11851,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11760,6 +12008,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -11916,6 +12165,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -12242,6 +12492,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -12398,6 +12649,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -12603,6 +12855,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -12828,6 +13081,112 @@ Transform:
   m_Children: []
   m_Father: {fileID: 791938264}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &895090794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895090795}
+  - component: {fileID: 895090798}
+  - component: {fileID: 895090797}
+  - component: {fileID: 895090796}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &895090795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895090794}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.212, z: 0.76}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1774814032}
+  m_Father: {fileID: 662764315}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &895090796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895090794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &895090797
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895090794}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &895090798
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895090794}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &931806913
 GameObject:
   m_ObjectHideFlags: 0
@@ -12864,6 +13223,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13020,6 +13380,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13140,6 +13501,131 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1064520184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &943678089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943678093}
+  - component: {fileID: 943678094}
+  - component: {fileID: 943678092}
+  - component: {fileID: 943678091}
+  - component: {fileID: 943678090}
+  m_Layer: 0
+  m_Name: Turret
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &943678090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943678089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &943678091
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943678089}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &943678092
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943678089}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &943678093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943678089}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.64, y: 0.3, z: -38.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 662764315}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943678094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943678089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1277dfa75a25c44b96ae111876ed18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 5911509268598375705, guid: 32dd59c076d3b4e4a92b4947818e4373,
+    type: 3}
+  firePoint: {fileID: 1774814032}
+  poolSize: 50
+  shootInterval: 1
+  shootTimer: 0
 --- !u!1 &945864790
 GameObject:
   m_ObjectHideFlags: 0
@@ -13176,6 +13662,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13332,6 +13819,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13488,6 +13976,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13757,6 +14246,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13800,6 +14290,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -13956,6 +14447,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14112,6 +14604,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14268,6 +14761,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14424,6 +14918,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14648,6 +15143,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14804,6 +15300,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -14960,6 +15457,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -15116,6 +15614,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -15272,6 +15771,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -15541,6 +16041,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -15667,7 +16168,6 @@ Transform:
   - {fileID: 560200010}
   - {fileID: 1555418700}
   - {fileID: 26718871}
-  - {fileID: 1715791341}
   - {fileID: 1785693417}
   - {fileID: 1674026720}
   - {fileID: 150369783}
@@ -15808,6 +16308,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -15964,6 +16465,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -16120,6 +16622,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -16276,6 +16779,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -16432,6 +16936,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -16588,6 +17093,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -16744,6 +17250,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -17033,6 +17540,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -17189,6 +17697,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -17345,6 +17854,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -17501,6 +18011,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -17803,6 +18314,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18071,6 +18583,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18360,6 +18873,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18516,6 +19030,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18672,6 +19187,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18828,6 +19344,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -18984,6 +19501,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19253,6 +19771,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19296,6 +19815,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19452,6 +19972,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19608,6 +20129,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19764,6 +20286,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -19992,6 +20515,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20148,6 +20672,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20304,6 +20829,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20460,6 +20986,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20684,6 +21211,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20804,6 +21332,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1064520184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1431690161
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.996827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2500019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095765701364992888, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_Name
+      value: ImpactTimeGrenadeTool_Freeze (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7a0f985554b5c346939e332ebfd0772, type: 3}
 --- !u!1 &1434087636
 GameObject:
   m_ObjectHideFlags: 0
@@ -20840,6 +21436,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -20996,6 +21593,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21152,6 +21750,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21308,6 +21907,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21464,6 +22064,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21620,6 +22221,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21776,6 +22378,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -21932,6 +22535,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -22088,6 +22692,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -22312,6 +22917,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -22649,6 +23255,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -22692,6 +23299,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -22848,6 +23456,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23004,6 +23613,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23160,6 +23770,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23316,6 +23927,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23472,6 +24084,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23706,6 +24319,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -23930,6 +24544,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24086,6 +24701,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24242,6 +24858,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24398,6 +25015,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24554,6 +25172,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24710,6 +25329,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -24866,6 +25486,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -25022,6 +25643,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -25178,6 +25800,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -25366,162 +25989,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3362e978469b0e48985ebd003be7062, type: 3}
---- !u!1 &1715791340
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1715791341}
-  - component: {fileID: 1715791346}
-  - component: {fileID: 1715791345}
-  - component: {fileID: 1715791344}
-  - component: {fileID: 1715791343}
-  - component: {fileID: 1715791342}
-  m_Layer: 7
-  m_Name: Cube (198)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1715791341
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.65, y: 16.99, z: -19.43}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1064520184}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715791342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72eb319a967800e4fa7fda75f4fec7dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  localTimeScale: 1
-  defaultLocalTimeScale: 1
-  isTimeControlledCurrently: 0
-  rb: {fileID: 0}
-  originalVelocity: {x: 0, y: 0, z: 0}
-  originalAngularVelocity: {x: 0, y: 0, z: 0}
-  originalDrag: 0
-  originalAngularDrag: 0
-  originalUseGravity: 0
-  originalGravity: {x: 0, y: 0, z: 0}
---- !u!54 &1715791343
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &1715791344
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1715791345
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1715791346
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715791340}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1717422386
 GameObject:
   m_ObjectHideFlags: 0
@@ -25558,6 +26025,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -25714,6 +26182,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -25870,6 +26339,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26026,6 +26496,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26182,6 +26653,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26302,6 +26774,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1064520184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1774814031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774814032}
+  m_Layer: 0
+  m_Name: FireTransfrom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1774814032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774814031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.070000365, z: 0.31}
+  m_LocalScale: {x: 10, y: 10, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 895090795}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779948550
 GameObject:
   m_ObjectHideFlags: 0
@@ -26338,6 +26841,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26494,6 +26998,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26650,6 +27155,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26806,6 +27312,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -26962,6 +27469,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -27118,6 +27626,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -27342,6 +27851,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -27498,6 +28008,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -27767,6 +28278,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -27923,6 +28435,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28034,6 +28547,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28190,6 +28704,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28346,6 +28861,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28502,6 +29018,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28658,6 +29175,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28814,6 +29332,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -28970,6 +29489,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29239,6 +29759,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29282,6 +29803,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29438,6 +29960,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29707,6 +30230,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29750,6 +30274,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -29906,6 +30431,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30062,6 +30588,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30218,6 +30745,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30374,6 +30902,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30643,6 +31172,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30686,6 +31216,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -30842,6 +31373,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31030,6 +31562,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3362e978469b0e48985ebd003be7062, type: 3}
+--- !u!1001 &2037468744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.996827
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2500019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -40.31897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992954584287352711, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095765701364992888, guid: c7a0f985554b5c346939e332ebfd0772,
+        type: 3}
+      propertyPath: m_Name
+      value: ImpactTimeGrenadeTool_Freeze
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7a0f985554b5c346939e332ebfd0772, type: 3}
 --- !u!1 &2047565946
 GameObject:
   m_ObjectHideFlags: 0
@@ -31168,6 +31768,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31324,6 +31925,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31480,6 +32082,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31636,6 +32239,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31792,6 +32396,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -31948,6 +32553,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -32104,6 +32710,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -32328,6 +32935,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -32484,6 +33092,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -32753,6 +33362,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -32864,6 +33474,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -33020,6 +33631,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -33176,6 +33788,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 0}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
@@ -33448,3 +34061,7 @@ SceneRoots:
   - {fileID: 193884246}
   - {fileID: 1197678520}
   - {fileID: 691610243}
+  - {fileID: 2037468744}
+  - {fileID: 1431690161}
+  - {fileID: 176980219}
+  - {fileID: 943678093}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2599261325285242490}
   - component: {fileID: 3846973834009926873}
   m_Layer: 8
-  m_Name: TimeSphere
+  m_Name: TimeSphere_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: f49cbaceab92928489c2f921a3d38cb9, type: 3}
+  - {fileID: 2100000, guid: 88544e6d36fcae24ba5162fcb895433a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

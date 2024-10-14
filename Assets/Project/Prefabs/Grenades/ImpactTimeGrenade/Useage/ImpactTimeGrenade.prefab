@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992954584287352711}
   - component: {fileID: -1680203377894153563}
+  - component: {fileID: 5672630945086044247}
   - component: {fileID: 6448979677206827397}
   - component: {fileID: 9222709744953181937}
   - component: {fileID: 3739965852447870947}
@@ -61,6 +62,29 @@ MonoBehaviour:
   timeSpherePrefab: {fileID: 5095765701364992888, guid: 23099510803ab964da311dd61fc0ec2a,
     type: 3}
   timeSphere: {fileID: 0}
+--- !u!114 &5672630945086044247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095765701364992888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72eb319a967800e4fa7fda75f4fec7dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localTimeScale: 1
+  defaultLocalTimeScale: 1
+  isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
+  rb: {fileID: 0}
+  originalVelocity: {x: 0, y: 0, z: 0}
+  originalAngularVelocity: {x: 0, y: 0, z: 0}
+  originalDrag: 0
+  originalAngularDrag: 0
+  originalUseGravity: 0
+  originalGravity: {x: 0, y: 0, z: 0}
 --- !u!33 &6448979677206827397
 MeshFilter:
   m_ObjectHideFlags: 0

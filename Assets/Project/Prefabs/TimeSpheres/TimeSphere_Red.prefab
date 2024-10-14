@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2599261325285242490}
   - component: {fileID: 3846973834009926873}
   m_Layer: 8
-  m_Name: LoopTimeSphere
+  m_Name: TimeSphere_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeScaleInsideSphere: 0.1
   sphereSize: 10
-  effectDuration: 0
+  effectDuration: 5
   isInDilation: 0
-  setDilationOnStart: 1
+  setDilationOnStart: 0
   showGizmos: 1
   objectsInsideSphere: []
   sphereSizeDistanceOffsetThreshold: 1
@@ -121,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88544e6d36fcae24ba5162fcb895433a, type: 2}
+  - {fileID: 2100000, guid: cf4c77a847ea47a4fa14a849ff9870aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

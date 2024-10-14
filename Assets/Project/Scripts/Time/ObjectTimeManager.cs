@@ -7,6 +7,7 @@ public class ObjectTimeManager : MonoBehaviour
     [SerializeField] private float localTimeScale = 1f;
     [SerializeField] private float defaultLocalTimeScale = 1f;
     [SerializeField] private bool isTimeControlledCurrently = false;
+    [SerializeField] private bool CanBeTimeControlled = true;
 
     [Header("Rigidbody Settings")]
     [SerializeField] private Rigidbody rb;
@@ -26,7 +27,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (localTimeScale != defaultLocalTimeScale && rb != null && isTimeControlledCurrently)
+        if (localTimeScale != defaultLocalTimeScale && rb != null && isTimeControlledCurrently && CanBeTimeControlled)
         {
             ApplyTimeScale();
         }
@@ -34,6 +35,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     public void SetTimeScale(float newTimeScale)
     {
+        if(!CanBeTimeControlled) return;
         if (!isTimeControlledCurrently)
             StoreOriginalData();
             
@@ -44,6 +46,8 @@ public class ObjectTimeManager : MonoBehaviour
 
     public void ResetTimeScale()
     {
+        if(!CanBeTimeControlled) return;
+
         isTimeControlledCurrently = false;
         RestoreOriginalData();
         localTimeScale = defaultLocalTimeScale;

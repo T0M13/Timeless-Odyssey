@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BubbleShaderMAT
+  m_Name: BubbleShader_Blue_MAT
   m_Shader: {fileID: -6465566751694194690, guid: f49cbaceab92928489c2f921a3d38cb9,
     type: 3}
   m_Parent: {fileID: 0}
@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_1f44ff2604a9415c8bdeb9cb421b86b3_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -44,8 +48,9 @@ Material:
     m_Floats:
     - Vector1_37163E29: 4.07
     - Vector1_AE9DFBD: 0.01
-    - Vector1_D65B033B: 0.6
-    - Vector1_E266B039: 0
+    - Vector1_D65B033B: 0.2
+    - Vector1_E266B039: 0.4
+    - _NoiseScale: 15
     - _OffsetPower: 8.16
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -55,6 +60,8 @@ Material:
     m_Colors:
     - Color_63659391: {r: 0, g: 5.9921575, b: 5.6831536, a: 1}
     - _InsideColor: {r: 0, g: 0, b: 0, a: 1}
+    - _NoiseColor: {r: 4, g: 4, b: 4, a: 1}
+    - _NoiseTiling: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectionColor: {r: 0.95283014, g: 0.9123799, b: 0.9123799, a: 1}
     - _RimColor: {r: 0, g: 16, b: 15.1749115, a: 1}
     - _Rim_Color: {r: 0.36320746, g: 0.9703602, b: 1, a: 0}

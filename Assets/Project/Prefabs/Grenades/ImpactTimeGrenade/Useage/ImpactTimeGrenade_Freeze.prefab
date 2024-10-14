@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992954584287352711}
-  - component: {fileID: -4600947042002478438}
-  - component: {fileID: 969918073047537114}
+  - component: {fileID: -1680203377894153563}
+  - component: {fileID: 5672630945086044247}
   - component: {fileID: 6448979677206827397}
   - component: {fileID: 9222709744953181937}
   - component: {fileID: 3739965852447870947}
   - component: {fileID: 5759487826537364637}
   m_Layer: 10
-  m_Name: ImpactTimeGrenadeTool
+  m_Name: ImpactTimeGrenade_Freeze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4600947042002478438
+--- !u!114 &-1680203377894153563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,21 +46,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5095765701364992888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4255b0ed1ec8d41be6842af0f503f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 83e78e1c54d978544a9856e8c2542d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteractable: 1
-  inventoryToolPrefab: {fileID: 5932954101294371449, guid: 745b97c960dd46043ab991291191abb4,
-    type: 3}
-  destoryOnPickUp: 1
+  grenadeCollider: {fileID: 3739965852447870947}
+  grenadeRenderer: {fileID: 9222709744953181937}
   explosionRadius: 8
   explosionForce: 2700
   explosionDelay: 3
+  showGizmos: 1
   timeEffectRadius: 10
-  slowFactor: 0.1
-  effectDuration: 5
+  slowFactor: 0
+  effectDuration: 15
   timeDilationDelay: 0.1
---- !u!114 &969918073047537114
+  timeSpherePrefab: {fileID: 5095765701364992888, guid: 1f2f25eb56e4fdb4c9c814f2a5335b1d,
+    type: 3}
+  timeSphere: {fileID: 0}
+--- !u!114 &5672630945086044247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

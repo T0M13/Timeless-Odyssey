@@ -80,6 +80,7 @@ MonoBehaviour:
   localTimeScale: 1
   defaultLocalTimeScale: 1
   isTimeControlledCurrently: 0
+  CanBeTimeControlled: 1
   rb: {fileID: 5759487826537364637}
   originalVelocity: {x: 0, y: 0, z: 0}
   originalAngularVelocity: {x: 0, y: 0, z: 0}
