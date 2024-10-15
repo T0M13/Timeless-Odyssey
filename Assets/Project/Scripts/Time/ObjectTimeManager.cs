@@ -20,6 +20,8 @@ public class ObjectTimeManager : MonoBehaviour
     [SerializeField] private bool originalUseGravity;
     [SerializeField] private Vector3 originalGravity;
 
+    public float LocalTimeScale { get => localTimeScale; set => localTimeScale = value; }
+
     void Awake()
     {
         GetRefs();
@@ -27,7 +29,7 @@ public class ObjectTimeManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (localTimeScale != defaultLocalTimeScale && rb != null && isTimeControlledCurrently && CanBeTimeControlled)
+        if (LocalTimeScale != defaultLocalTimeScale && rb != null && isTimeControlledCurrently && CanBeTimeControlled)
         {
             ApplyTimeScale();
         }
@@ -40,7 +42,7 @@ public class ObjectTimeManager : MonoBehaviour
             StoreOriginalData();
 
         isTimeControlledCurrently = true;
-        localTimeScale = newTimeScale;
+        LocalTimeScale = newTimeScale;
         UpdateRigidbody();
     }
 
@@ -50,7 +52,7 @@ public class ObjectTimeManager : MonoBehaviour
 
         isTimeControlledCurrently = false;
         RestoreOriginalData();
-        localTimeScale = defaultLocalTimeScale;
+        LocalTimeScale = defaultLocalTimeScale;
     }
 
     private void GetRefs()
@@ -97,17 +99,17 @@ public class ObjectTimeManager : MonoBehaviour
         // Only apply velocity scaling if the Rigidbody is not kinematic
         if (!rb.isKinematic)
         {
-            rb.velocity = originalVelocity * localTimeScale;
-            rb.angularVelocity = originalAngularVelocity * localTimeScale;
+            rb.velocity = originalVelocity * LocalTimeScale;
+            rb.angularVelocity = originalAngularVelocity * LocalTimeScale;
         }
 
-        Vector3 customGravity = originalGravity * localTimeScale;
+        Vector3 customGravity = originalGravity * LocalTimeScale;
         rb.AddForce(customGravity, ForceMode.Acceleration);
     }
 
     private void UpdateRigidbody()
     {
-        rb.drag *= localTimeScale;
-        rb.angularDrag *= localTimeScale;
+        rb.drag *= LocalTimeScale;
+        rb.angularDrag *= LocalTimeScale;
     }
 }

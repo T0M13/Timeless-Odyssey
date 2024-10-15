@@ -48,7 +48,6 @@ MonoBehaviour:
   isRewinding: 0
   rewindDuration: 30
   recordInterval: 0.1
-  rewindSpeed: 0.03
+  rewindSpeed: 0.035
   maxSnapshots: 3000
-  snapshots: []
   isDestroyed: 0
