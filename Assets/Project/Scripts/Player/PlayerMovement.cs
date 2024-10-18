@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canJump = true;
     [SerializeField][ShowOnly] private bool hasJumped = false;
     [SerializeField] private float jumpThreshold = .1f;
-    [SerializeField] private float jumpForce = 5f; 
+    [SerializeField] private float jumpForce = 5f;
 
     [Header("Fall Settings")]
     [SerializeField][ShowOnly] private bool isFalling = false;
@@ -40,8 +40,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Gizmo Settings")]
     [SerializeField] private bool showGizmos = true;
-    [SerializeField] private float gizmoLineLength = 2f;
-    [SerializeField] private float gizmoSphereRadius = 0.1f;
 
     public bool HasJumped { get => hasJumped; set => hasJumped = value; }
 
@@ -81,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveLogic(Rigidbody rb, Vector2 movement)
     {
+
         Vector3 velocity;
 
         switch (moveState)
@@ -99,7 +98,14 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-        rb.velocity = rb.transform.TransformDirection(velocity);
+        if (playerReferences.CurrentPlatform != null)
+        {
+            MovablePlatformController platformController = playerReferences.CurrentPlatform.GetComponent<MovablePlatformController>();
+            velocity += rb.transform.InverseTransformDirection(platformController.PlatformVelocity);
+        }
+
+        if (!rb.isKinematic)
+            rb.velocity = rb.transform.TransformDirection(velocity);
     }
 
     private void Jump()
@@ -145,8 +151,8 @@ public class PlayerMovement : MonoBehaviour
                 playerReferences.SetDefaultCameraPosition();
                 break;
             case MovementState.Running:
-                playerReferences.SetDefaultCollider(); 
-                playerReferences.SetDefaultCameraPosition(); 
+                playerReferences.SetDefaultCollider();
+                playerReferences.SetDefaultCameraPosition();
                 break;
             case MovementState.Crouching:
                 playerReferences.SetCrouchCollider();
@@ -190,7 +196,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (value.ReadValue<float>() >= 1f && !HasJumped)
         {
-            Jump(); 
+            Jump();
             OnMovementStateChanged();
         }
     }

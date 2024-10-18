@@ -27,11 +27,19 @@ public class MovablePlatformController : MonoBehaviour
     [SerializeField] protected bool isClosing = false;
     [SerializeField] protected bool startOpen = false;
 
+    [Header("Platform Settings")]
+    [SerializeField] protected bool isPlatform = false;
+
     [Header("Debug Settings")]
     [SerializeField][ShowOnly] protected Vector3 targetPosition;
     [SerializeField][ShowOnly] protected Quaternion targetRotation;
     [SerializeField][ShowOnly] protected Vector3 targetScale;
     [SerializeField][ShowOnly] protected bool isMoving = false;
+
+    [SerializeField][ShowOnly] protected Vector3 lastPosition;
+    [SerializeField][ShowOnly] protected Vector3 platformVelocity;
+
+    public Vector3 PlatformVelocity { get => platformVelocity; set => platformVelocity = value; }
 
     protected virtual void Start()
     {
@@ -48,6 +56,9 @@ public class MovablePlatformController : MonoBehaviour
         {
             SetLocalState(closedLocalPosition, closedLocalRotation, closedLocalScale);
         }
+
+        lastPosition = transform.position;
+
     }
 
     protected virtual void FixedUpdate()
@@ -65,6 +76,9 @@ public class MovablePlatformController : MonoBehaviour
         {
             MoveToState(closedLocalPosition, closedLocalRotation, closedLocalScale, scaledMovementSpeed);
         }
+
+        PlatformVelocity = (transform.position - lastPosition) / Time.fixedDeltaTime;
+        lastPosition = transform.position;
     }
 
     protected virtual void MoveToState(Vector3 targetLocalPosition, Quaternion targetLocalRotation, Vector3 targetLocalScale, float speed)
@@ -155,10 +169,35 @@ public class MovablePlatformController : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.matrix = Matrix4x4.TRS(openWorldPosition, openLocalRotation, openLocalScale);
         Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
+    }
 
-        // Draw a line connecting the closed and open positions
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(closedWorldPosition, openWorldPosition);
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(!isPlatform) return;
+        if(other.GetComponent<PlayerReferences>() != null)
+        {
+            other.transform.SetParent(transform);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!isPlatform) return;
+        if (other.GetComponent<PlayerReferences>() != null)
+        {
+            other.GetComponent<PlayerReferences>().SetCurrentPlatform(transform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(!isPlatform) return;
+        if (other.GetComponent<PlayerReferences>() != null)
+        {
+            other.GetComponent<PlayerReferences>().UnsetCurrentPlatform();
+        }
+
     }
 
 

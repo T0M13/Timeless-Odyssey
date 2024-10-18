@@ -10,6 +10,7 @@ public class PlayerReferences : MonoBehaviour
     [SerializeField] private PlayerLook playerLook;
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private PlayerInteraction playerInteraction;
+    [SerializeField] private PlayerRewind playerRewind;
     [SerializeField] private Rigidbody playerBody;
     [SerializeField] private CapsuleCollider playerCollider;
     [Header("Grounded")]
@@ -20,6 +21,9 @@ public class PlayerReferences : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Transform cameraTransform;
+
+    [Header("Platforming")]
+    [SerializeField] private Transform currentPlatform = null;
 
     [Header("Collider & Crouch Settings")]
     [SerializeField] private Vector3 defaultColliderCenter = new Vector3(0, 0, 0);
@@ -42,6 +46,8 @@ public class PlayerReferences : MonoBehaviour
     public Camera PlayerCamera { get => playerCamera; set => playerCamera = value; }
     public PlayerInventory PlayerInventory { get => playerInventory; set => playerInventory = value; }
     public PlayerInteraction PlayerInteraction { get => playerInteraction; set => playerInteraction = value; }
+    public Transform CurrentPlatform { get => currentPlatform; set => currentPlatform = value; }
+    public PlayerRewind PlayerRewind { get => playerRewind; set => playerRewind = value; }
 
     private void OnValidate()
     {
@@ -103,6 +109,19 @@ public class PlayerReferences : MonoBehaviour
             }
         }
 
+
+        if (PlayerRewind == null)
+        {
+            try
+            {
+                PlayerRewind = GetComponent<PlayerRewind>();
+            }
+            catch
+            {
+                Debug.Log("PlayerRewind Missing from PlayerReferences");
+            }
+        }
+
         if (PlayerBody == null)
         {
             try
@@ -159,6 +178,17 @@ public class PlayerReferences : MonoBehaviour
     {
         if (cameraCoroutine != null) StopCoroutine(cameraCoroutine);
         cameraCoroutine = StartCoroutine(LerpCameraPosition(cameraTransform, cameraTransform.localPosition, crouchCameraPosition));
+    }
+
+    public void SetCurrentPlatform(Transform platform)
+    {
+        CurrentPlatform = platform;
+        transform.SetParent(CurrentPlatform);
+    }
+    public void UnsetCurrentPlatform()
+    {
+        transform.SetParent(null);
+        CurrentPlatform = null;
     }
 
 

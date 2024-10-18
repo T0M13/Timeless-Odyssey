@@ -4,33 +4,61 @@ using System.Collections;
 public class AutomaticPlatformController : MovablePlatformController
 {
     [Header("Automatic Movement Cycle Settings")]
-    public float delayBetweenMoves = 2f; 
+    public float delayBetweenMoves = 2f;
 
-    private bool isMovingUp = true;
+    [SerializeField] protected bool isMovingUp = true;
+
     protected override void Start()
     {
-        base.Start();
+        base.Start(); 
+
+        InitializePlatformState();
+
         StartCoroutine(ContinuousMovement());
+    }
+
+    private void InitializePlatformState()
+    {
+        if (startOpen)
+        {
+            OpenPlatformInitially(); 
+        }
+        else
+        {
+            ClosePlatformInitially();
+        }
+    }
+
+    private void OpenPlatformInitially()
+    {
+        SetLocalState(openLocalPosition, openLocalRotation, openLocalScale); 
+        isMovingUp = false; 
+    }
+
+    private void ClosePlatformInitially()
+    {
+        SetLocalState(closedLocalPosition, closedLocalRotation, closedLocalScale); 
+        isMovingUp = true; 
     }
 
     private IEnumerator ContinuousMovement()
     {
+        yield return new WaitForSeconds(.1f);
+
         while (true)
         {
             if (isMovingUp)
             {
-                Open();  // Start opening
-                yield return new WaitUntil(() => !isOpening);  // Wait until fully opened
+                Open(); 
+                yield return new WaitUntil(() => !isOpening); 
             }
             else
             {
-                Close(); // Start closing
-                yield return new WaitUntil(() => !isClosing);  // Wait until fully closed
+                Close(); 
+                yield return new WaitUntil(() => !isClosing); 
             }
 
-            isMovingUp = !isMovingUp; // Toggle direction
-
-            // Apply the delay between moves
+            isMovingUp = !isMovingUp; 
             yield return new WaitForSeconds(delayBetweenMoves * timeManager.LocalTimeScale);
         }
     }
