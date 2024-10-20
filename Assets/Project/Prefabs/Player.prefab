@@ -496,7 +496,9 @@ MonoBehaviour:
   snapshotInterval: 0.1
   maxSnapshots: 200
   snapshotDistanceThreshold: 0.01
-  smoothRewindSpeed: 20
+  minRewindSpeed: 2
+  maxRewindSpeed: 75
+  rewindAcceleration: 2.5
   isRewinding: 0
   snapshots: []
   snapshotTimer: 0

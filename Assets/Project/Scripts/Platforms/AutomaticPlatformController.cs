@@ -17,6 +17,7 @@ public class AutomaticPlatformController : MovablePlatformController
         StartCoroutine(ContinuousMovement());
     }
 
+
     private void InitializePlatformState()
     {
         if (startOpen)

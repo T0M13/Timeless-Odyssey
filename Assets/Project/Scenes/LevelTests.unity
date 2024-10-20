@@ -935,7 +935,7 @@ MonoBehaviour:
   openLocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   closedLocalScale: {x: 8, y: 8, z: 1}
   openLocalScale: {x: 8, y: 8, z: 1}
-  movementSpeed: 1
+  movementSpeed: 2
   isOpening: 0
   isClosing: 0
   startOpen: 1
@@ -944,10 +944,11 @@ MonoBehaviour:
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   targetScale: {x: 0, y: 0, z: 0}
   isMoving: 0
+  updatePosition: 0
   lastPosition: {x: 0, y: 0, z: 0}
   platformVelocity: {x: 0, y: 0, z: 0}
-  delayBetweenMoves: 0.1
-  isMovingUp: 0
+  delayBetweenMoves: 2
+  isMovingUp: 1
 --- !u!23 &6264193563444939364
 MeshRenderer:
   m_ObjectHideFlags: 0

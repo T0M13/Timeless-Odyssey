@@ -35,6 +35,7 @@ public class MovablePlatformController : MonoBehaviour
     [SerializeField][ShowOnly] protected Quaternion targetRotation;
     [SerializeField][ShowOnly] protected Vector3 targetScale;
     [SerializeField][ShowOnly] protected bool isMoving = false;
+    [SerializeField][ShowOnly] protected bool updatePosition = false;
 
     [SerializeField][ShowOnly] protected Vector3 lastPosition;
     [SerializeField][ShowOnly] protected Vector3 platformVelocity;
@@ -143,19 +144,6 @@ public class MovablePlatformController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (!Application.isPlaying)
-        {
-            // Ensure Gizmos reflect changes when editing
-            if (startOpen)
-            {
-                SetLocalState(openLocalPosition, openLocalRotation, openLocalScale);
-            }
-            else
-            {
-                SetLocalState(closedLocalPosition, closedLocalRotation, closedLocalScale);
-            }
-        }
-
         // Convert local positions to world positions for proper visualization
         Vector3 closedWorldPosition = transform.parent != null ? transform.parent.TransformPoint(closedLocalPosition) : closedLocalPosition;
         Vector3 openWorldPosition = transform.parent != null ? transform.parent.TransformPoint(openLocalPosition) : openLocalPosition;
