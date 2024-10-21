@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,17 +10,19 @@ public class PlayerRewind : MonoBehaviour
 
     [Header("Rewind Settings")]
     [SerializeField] private float snapshotInterval = 0.1f;
-    [SerializeField] private int maxSnapshots = 200;  // Maximum number of snapshots
-    [SerializeField] private float snapshotDistanceThreshold = 0.01f;  // Movement threshold for recording
-    [SerializeField] private float minRewindSpeed = 1f;  // Minimum rewind speed at start
-    [SerializeField] private float maxRewindSpeed = 5f;  // Maximum rewind speed to reach
-    [SerializeField] private float rewindAcceleration = 1f;  // How fast the rewind speed increases
+    [SerializeField] private int maxSnapshots = 200;
+    [SerializeField] private float snapshotDistanceThreshold = 0.01f;
+    [SerializeField] private float minRewindSpeed = 1f;
+    [SerializeField] private float maxRewindSpeed = 5f;
+    [SerializeField] private float rewindSpeedMultiplier = 1.5f;
+    [SerializeField] private int smoothOutSnapshots = 5;
 
     [SerializeField][ShowOnly] private bool isRewinding = false;
     [SerializeField][ShowOnly] private List<TransformSnapshot> snapshots = new List<TransformSnapshot>();
     [SerializeField][ShowOnly] private float snapshotTimer = 0f;
+    [SerializeField][ShowOnly] private float currentRewindSpeed;
 
-    private float currentRewindSpeed;  // Current speed of the rewind
+    public event Action<bool> OnRewindStateChanged;  // Event to notify whether we are rewinding or not
 
     private void Start()
     {
@@ -37,19 +40,17 @@ public class PlayerRewind : MonoBehaviour
 
     private void RecordSnapshots()
     {
-        // Check if the player is moving
         if (ShouldRecordSnapshot())
         {
             snapshotTimer += Time.deltaTime;
 
-            // Only record snapshots at intervals when the player is moving
             if (snapshotTimer >= snapshotInterval)
             {
                 snapshotTimer = 0f;
 
                 if (snapshots.Count >= maxSnapshots)
                 {
-                    snapshots.RemoveAt(0);  // Remove oldest snapshot to maintain the limit
+                    snapshots.RemoveAt(0);
                 }
 
                 snapshots.Add(new TransformSnapshot(transform.position, transform.rotation));
@@ -57,7 +58,6 @@ public class PlayerRewind : MonoBehaviour
         }
         else
         {
-            // Reset the timer if the player is not moving
             snapshotTimer = 0f;
         }
     }
@@ -82,22 +82,26 @@ public class PlayerRewind : MonoBehaviour
     private void StartRewind()
     {
         isRewinding = true;
-        currentRewindSpeed = minRewindSpeed;  // Start at the minimum speed
-        playerReferences.PlayerBody.isKinematic = true;  // Disable physics during rewind
+        currentRewindSpeed = minRewindSpeed;
+        playerReferences.PlayerBody.isKinematic = true;
+
+        OnRewindStateChanged?.Invoke(isRewinding);  // Notify that rewinding started
+
         StartCoroutine(SmoothRewindPlayer());
     }
 
     private void StopRewind()
     {
         isRewinding = false;
-        playerReferences.PlayerBody.isKinematic = false;  // Re-enable physics after rewind
+        playerReferences.PlayerBody.isKinematic = false;
+
+        OnRewindStateChanged?.Invoke(isRewinding);  // Notify that rewinding stopped
     }
 
     private IEnumerator SmoothRewindPlayer()
     {
         playerReferences.PlayerBody.isKinematic = true;
 
-        // Rewind for a maximum of 20 seconds or until snapshots run out
         while (snapshots.Count > 0 && isRewinding)
         {
             TransformSnapshot lastSnapshot = snapshots[snapshots.Count - 1];
@@ -109,21 +113,25 @@ public class PlayerRewind : MonoBehaviour
             Vector3 endPos = lastSnapshot.position;
             Quaternion endRot = lastSnapshot.rotation;
 
-            // Smooth transition between snapshots with increasing speed
+            if (snapshots.Count > smoothOutSnapshots)
+            {
+                currentRewindSpeed = Mathf.Lerp(currentRewindSpeed, maxRewindSpeed * rewindSpeedMultiplier, Time.deltaTime);
+            }
+            else
+            {
+                currentRewindSpeed = Mathf.Lerp(currentRewindSpeed, 0f, Time.deltaTime * (smoothOutSnapshots - snapshots.Count) / smoothOutSnapshots);
+            }
+
             while (t < 1f && isRewinding)
             {
-                t += Time.deltaTime * currentRewindSpeed;  // Adjust the interpolation speed
-
-                // Gradually increase the rewind speed
-                currentRewindSpeed = Mathf.Clamp(currentRewindSpeed + rewindAcceleration * Time.deltaTime, minRewindSpeed, maxRewindSpeed);
-
+                t += Time.deltaTime * currentRewindSpeed;
                 transform.position = Vector3.Lerp(startPos, endPos, t);
                 transform.rotation = Quaternion.Slerp(startRot, endRot, t);
                 yield return null;
             }
         }
 
-        StopRewind();  // Stop once the rewind is complete
+        StopRewind();
     }
 
     [System.Serializable]

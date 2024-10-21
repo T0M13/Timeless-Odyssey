@@ -31,6 +31,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2130133830786101317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &742647653252011982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3472075345845379881}
+  m_Layer: 9
+  m_Name: Volumes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3472075345845379881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742647653252011982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5819912102369935906}
+  m_Father: {fileID: 1518788930100153646}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787374571999402351
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +133,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6889579923799414802}
+  - {fileID: 3472075345845379881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5696043003951641105
@@ -496,12 +529,14 @@ MonoBehaviour:
   snapshotInterval: 0.1
   maxSnapshots: 200
   snapshotDistanceThreshold: 0.01
-  minRewindSpeed: 2
-  maxRewindSpeed: 75
-  rewindAcceleration: 2.5
+  minRewindSpeed: 1
+  maxRewindSpeed: 30
+  rewindSpeedMultiplier: 5
+  smoothOutSnapshots: 5
   isRewinding: 0
   snapshots: []
   snapshotTimer: 0
+  currentRewindSpeed: 0
 --- !u!136 &9054466764171434197
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -723,3 +758,71 @@ Transform:
   - {fileID: 2130133830786101317}
   m_Father: {fileID: 1518788930100153646}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8027346724092662805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5819912102369935906}
+  - component: {fileID: 1446793026312353020}
+  - component: {fileID: 9201562004964351714}
+  m_Layer: 0
+  m_Name: RewindVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5819912102369935906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027346724092662805}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40.620003, y: -1.5, z: 33.519997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3472075345845379881}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446793026312353020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027346724092662805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: d8caa7cc6fc91054f85ca853686d9244, type: 2}
+--- !u!114 &9201562004964351714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027346724092662805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a84cfba7a4db0418111385ffd8a1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRewind: {fileID: 4370329791490106311}
+  volume: {fileID: 1446793026312353020}
+  rewindLerpSpeed: 0.75
+  nonRewindLerpSpeed: 1.5
+  rewindWeight: 1
+  nonRewindWeight: 0
