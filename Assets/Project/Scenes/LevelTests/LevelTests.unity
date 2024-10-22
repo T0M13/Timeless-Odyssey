@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 320ca24ad64b8ca408f22321419c24d9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.016506245, g: 0.016506245, b: 0.016506245, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 21c5858e73cd5234184e31377f914906,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e697ce25bbe2a604db1e4821d1e22763,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -730,16 +732,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 594123252968270446, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 758801283885407159, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: interactionLayer.m_Bits
-      value: 1280
-      objectReference: {fileID: 0}
     - target: {fileID: 1518788930100153646, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -790,50 +782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1787374571999402351, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6257288305877756367, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6257288305877756367, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270568258287099595, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7290041161301278091, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: throwForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665835108303317891, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851715965389552353, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851715965389552353, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851715965389552353, guid: 5f00cb716a8fade4d96d2e17bbee2a50,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1035,7 +987,7 @@ GameObject:
   - component: {fileID: 8236822895384072507}
   - component: {fileID: 6269315180300688037}
   - component: {fileID: 2176824863331038463}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cliff_B2_LOD2
   m_TagString: CRocks
   m_Icon: {fileID: 0}
@@ -1155,7 +1107,7 @@ GameObject:
   - component: {fileID: 8747285239411341837}
   - component: {fileID: 2339896124433308354}
   - component: {fileID: 9041837024569523707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cliff_B2_LOD1
   m_TagString: CRocks
   m_Icon: {fileID: 0}
@@ -1173,7 +1125,7 @@ GameObject:
   - component: {fileID: 1318676013326695705}
   - component: {fileID: 842757667941094726}
   - component: {fileID: 1154420118692960446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cliff_B2_LOD3
   m_TagString: CRocks
   m_Icon: {fileID: 0}
@@ -1195,7 +1147,7 @@ GameObject:
   - component: {fileID: 550345304389818306}
   - component: {fileID: 6783301763685045684}
   - component: {fileID: 6783301763685045683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cliff_B2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1439,7 @@ GameObject:
   - component: {fileID: 8045764253345993997}
   - component: {fileID: 425151634461440134}
   - component: {fileID: 6652145657695575298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cliff_B2_LOD0
   m_TagString: CRocks
   m_Icon: {fileID: 0}
