@@ -36,6 +36,7 @@ public class MovablePlatformController : MonoBehaviour
     [SerializeField][ShowOnly] protected Vector3 targetScale;
     [SerializeField][ShowOnly] protected bool isMoving = false;
     [SerializeField][ShowOnly] protected bool updatePosition = false;
+    [SerializeField] protected bool showGizmos = false;
 
     [SerializeField][ShowOnly] protected Vector3 lastPosition;
     [SerializeField][ShowOnly] protected Vector3 platformVelocity;
@@ -144,6 +145,8 @@ public class MovablePlatformController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if(!showGizmos) return;
+
         // Convert local positions to world positions for proper visualization
         Vector3 closedWorldPosition = transform.parent != null ? transform.parent.TransformPoint(closedLocalPosition) : closedLocalPosition;
         Vector3 openWorldPosition = transform.parent != null ? transform.parent.TransformPoint(openLocalPosition) : openLocalPosition;

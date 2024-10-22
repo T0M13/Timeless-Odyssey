@@ -53,7 +53,8 @@ public class PlayerRewind : MonoBehaviour
                     snapshots.RemoveAt(0);
                 }
 
-                snapshots.Add(new TransformSnapshot(transform.position, transform.rotation));
+                // Record position only (not rotation)
+                snapshots.Add(new TransformSnapshot(transform.position));
             }
         }
         else
@@ -109,9 +110,9 @@ public class PlayerRewind : MonoBehaviour
 
             float t = 0;
             Vector3 startPos = transform.position;
-            Quaternion startRot = transform.rotation;
+
+            // Only rewinding the position
             Vector3 endPos = lastSnapshot.position;
-            Quaternion endRot = lastSnapshot.rotation;
 
             if (snapshots.Count > smoothOutSnapshots)
             {
@@ -126,7 +127,6 @@ public class PlayerRewind : MonoBehaviour
             {
                 t += Time.deltaTime * currentRewindSpeed;
                 transform.position = Vector3.Lerp(startPos, endPos, t);
-                transform.rotation = Quaternion.Slerp(startRot, endRot, t);
                 yield return null;
             }
         }
@@ -138,12 +138,10 @@ public class PlayerRewind : MonoBehaviour
     public class TransformSnapshot
     {
         public Vector3 position;
-        public Quaternion rotation;
 
-        public TransformSnapshot(Vector3 pos, Quaternion rot)
+        public TransformSnapshot(Vector3 pos)
         {
             position = pos;
-            rotation = rot;
         }
     }
 }

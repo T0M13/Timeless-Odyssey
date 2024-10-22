@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 15e23279ebbdd5440b1a192ef536e56c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cliffs_A: {instanceID: 0}
+  - cliffs_B12: {instanceID: 0}
+  - cliffs_B34: {instanceID: 0}
+  - rocks_ABC: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
