@@ -42,7 +42,7 @@ public class ParticleSystemReverseSphereHandler : MonoBehaviour
             mainModule.startColor = timeSphere.BubbleMaterialInstance.GetColor("_MainColor");
 
             p.Stop();
-            p.Clear(); 
+            p.Clear();
             p.Play();
         }
     }
