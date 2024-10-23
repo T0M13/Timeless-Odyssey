@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,16 @@ public class TimeSphere : MonoBehaviour
     [SerializeField] protected Renderer bubbleRenderer;
     [SerializeField] protected Material bubbleMaterialInstance;
 
+    public float SphereSize { get => sphereSize; set => sphereSize = value; }
+    public Material BubbleMaterialInstance { get => bubbleMaterialInstance; set => bubbleMaterialInstance = value; }
+
+    public event Action<float> OnSphereSizeChanged;
+
+    private void Awake()
+    {
+        SetMaterial();
+    }
+
     protected virtual void Start()
     {
         if (!setDilationOnStart) return;
@@ -36,7 +47,7 @@ public class TimeSphere : MonoBehaviour
 
     protected virtual void SetMaterial()
     {
-        bubbleMaterialInstance = bubbleRenderer.material;
+        BubbleMaterialInstance = bubbleRenderer.material;
     }
 
     protected virtual void SetTimeScale(float scale)
@@ -46,7 +57,7 @@ public class TimeSphere : MonoBehaviour
 
     protected virtual void SetSize(float size)
     {
-        sphereSize = size;
+        SphereSize = size;
         UpdateBubbleScaleSize(0f);
     }
 
@@ -65,7 +76,6 @@ public class TimeSphere : MonoBehaviour
     public virtual void InitiateTimeSphere()
     {
         SetMaterial();
-        bubbleMaterialInstance = bubbleRenderer.material;
         UpdateBubbleScaleSize(0f);
         isGrowing = true;
         isInDilation = true;
@@ -107,8 +117,10 @@ public class TimeSphere : MonoBehaviour
             currentGrowthTime += Time.deltaTime;
             float progress = Mathf.Clamp01(currentGrowthTime / growthDuration);
             float curveValue = growthCurve.Evaluate(progress);
-            float size = Mathf.Lerp(0f, sphereSize, curveValue);
+            float size = Mathf.Lerp(0f, SphereSize, curveValue);
             UpdateBubbleScaleSize(size);
+            OnSphereSizeChanged?.Invoke(size);
+
 
             // Stop growing when done
             if (progress >= 1f)
@@ -124,7 +136,7 @@ public class TimeSphere : MonoBehaviour
 
     protected virtual void SetTimeDilation()
     {
-        Collider[] objectsInRange = Physics.OverlapSphere(transform.position, sphereSize);
+        Collider[] objectsInRange = Physics.OverlapSphere(transform.position, SphereSize);
 
         foreach (Collider col in objectsInRange)
         {
@@ -147,7 +159,7 @@ public class TimeSphere : MonoBehaviour
             {
                 if (timeManager == null) continue;
 
-                if (Vector3.Distance(timeManager.transform.position, transform.position) >= sphereSize * sphereSizeDistanceOffsetThreshold)
+                if (Vector3.Distance(timeManager.transform.position, transform.position) >= SphereSize * sphereSizeDistanceOffsetThreshold)
                 {
                     timeManager.ResetTimeScale();
                     objectsToRemove.Add(timeManager);  
@@ -173,16 +185,16 @@ public class TimeSphere : MonoBehaviour
         if (showGizmos)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, sphereSize);
+            Gizmos.DrawWireSphere(transform.position, SphereSize);
             Gizmos.color = Color.magenta;
-            Gizmos.DrawWireSphere(transform.position, sphereSize * sphereSizeDistanceOffsetThreshold);
+            Gizmos.DrawWireSphere(transform.position, SphereSize * sphereSizeDistanceOffsetThreshold);
 
         }
     }
 
     protected virtual void OnValidate()
     {
-        UpdateBubbleScaleSize(sphereSize);
+        UpdateBubbleScaleSize(SphereSize);
     }
 
 }

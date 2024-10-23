@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class RewindTimeSphere : MonoBehaviour
     [SerializeField] protected bool showGizmos = true;
     [SerializeField] protected List<RewindProxy> objectsInsideSphere = new List<RewindProxy>();
     [SerializeField] protected bool isDestroyed = false;
+    [SerializeField] protected bool destoryAfter = true;
 
     [Header("Growth Settings")]
     [SerializeField] protected float growthDuration = 1f;
@@ -26,6 +28,16 @@ public class RewindTimeSphere : MonoBehaviour
     [Header("Shader Settings")]
     [SerializeField] protected Renderer bubbleRenderer;
     [SerializeField] protected Material bubbleMaterialInstance;
+
+    public float SphereSize { get => sphereSize; set => sphereSize = value; }
+    public Material BubbleMaterialInstance { get => bubbleMaterialInstance; set => bubbleMaterialInstance = value; }
+
+    public event Action<float> OnSphereSizeChanged;
+
+    private void Awake()
+    {
+        SetMaterial();
+    }
 
     private void Start()
     {
@@ -58,7 +70,7 @@ public class RewindTimeSphere : MonoBehaviour
         //effectDuration = duration;
     }
 
-    public virtual void SetSphereStats(float size, float recordInterval,float rewindSpeed)
+    public virtual void SetSphereStats(float size, float recordInterval, float rewindSpeed)
     {
         SetSize(size);
         SetRewindScale(recordInterval);
@@ -68,7 +80,6 @@ public class RewindTimeSphere : MonoBehaviour
     public virtual void InitiateTimeSphere()
     {
         SetMaterial();
-        bubbleMaterialInstance = bubbleRenderer.material;
         UpdateBubbleScaleSize(0f);
         isGrowing = true;
         RewindObjects();
@@ -83,6 +94,7 @@ public class RewindTimeSphere : MonoBehaviour
             float curveValue = growthCurve.Evaluate(progress);
             float size = Mathf.Lerp(0f, sphereSize, curveValue);
             UpdateBubbleScaleSize(size);
+            OnSphereSizeChanged?.Invoke(size);
 
             if (progress >= 1f)
             {
@@ -130,12 +142,13 @@ public class RewindTimeSphere : MonoBehaviour
 
         if (objectsInsideSphere.Count == 0)
         {
-            DestroyTimeSphere(); 
+            DestroyTimeSphere();
         }
     }
 
     private void DestroyTimeSphere()
     {
+        if (!destoryAfter) return;
         if (isDestroyed) return;
         isDestroyed = true;
         Destroy(gameObject);

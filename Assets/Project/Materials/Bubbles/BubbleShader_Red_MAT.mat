@@ -46,6 +46,7 @@ Material:
     - Vector1_AE9DFBD: 0.01
     - Vector1_D65B033B: 0.2
     - Vector1_E266B039: 0.15
+    - _DisplacementStrength: 0
     - _NoiseScale: 50
     - _OffsetPower: 8.16
     - _QueueControl: 0
@@ -53,9 +54,13 @@ Material:
     - _Refelction: 2
     - _ReflectionPower: 15
     - _RimPower: 10
+    - _SphereMaskHardness: 0
+    - _SphereMaskRadius: 0
     m_Colors:
-    - Color_63659391: {r: 5.992157, g: 0, b: 0.23952605, a: 1}
+    - Color_63659391: {r: 7.9066987, g: 0, b: 0.31605652, a: 1}
+    - _HitPosition: {r: 0, g: 0, b: 0, a: 0}
     - _InsideColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 7.4927354, g: 0.093810886, b: 0.031003108, a: 1}
     - _NoiseColor: {r: 4, g: 4, b: 4, a: 1}
     - _NoiseTiling: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectionColor: {r: 0.95283014, g: 0.9123799, b: 0.9123799, a: 1}

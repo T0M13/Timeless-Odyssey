@@ -13,7 +13,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _AO_TYPE_DIRT
+  - _AO_TYPE_AO
   - _COVERAGESAMPLING_UV
   - _DETAILSENABLE
   - _MICRODETAILS_ENABLE
@@ -110,18 +110,18 @@ Material:
     - _AO_Contrast: 0
     - _AO_Pos: 0.734
     - _AO_Possition: 0.76
-    - _AO_TYPE: 1
+    - _AO_TYPE: 0
     - _AlbedoTiling: 1.12
     - _BlenderTest: 1
     - _COVERAGESAMPLING: 0
     - _Contrast: 0
-    - _CoverageAmount: 0.313
+    - _CoverageAmount: 0.25
     - _CoverageCavity: 0.63
-    - _CoverageSmoothness: 0.824
+    - _CoverageSmoothness: 0.746
     - _CoverageTiling: 15
     - _DETAILSENABLE: 1
     - _Details_Enable: 1
-    - _Details_Intensity: 3.41
+    - _Details_Intensity: 4
     - _Details_Tiling: 3.73
     - _DirtTiling: 4.47
     - _MICRODETAILS_ENABLE: 1
@@ -130,7 +130,7 @@ Material:
     - _Macrodetails_Tiling: 3.2
     - _MicroDetails: 1
     - _Microdetails_Enable: 1
-    - _Microdetails_Intensity: 0.46
+    - _Microdetails_Intensity: 1
     - _Microdetails_Tiling: 2.63
     - _NONSQUARETEX: 0
     - _Position: 0.43

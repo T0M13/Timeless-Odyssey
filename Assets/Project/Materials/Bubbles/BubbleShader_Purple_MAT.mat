@@ -57,9 +57,10 @@ Material:
     - _SphereMaskHardness: 0
     - _SphereMaskRadius: 0
     m_Colors:
-    - Color_63659391: {r: 1.6570814, g: 0, b: 5.992157, a: 1}
+    - Color_63659391: {r: 2.186532, g: 0, b: 7.9066987, a: 1}
     - _HitPosition: {r: 0, g: 0, b: 0, a: 0}
     - _InsideColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 1.0878142, g: 0.12418877, b: 7.906699, a: 1}
     - _NoiseColor: {r: 4, g: 4, b: 4, a: 1}
     - _NoiseTiling: {r: 1, g: 1, b: 0, a: 0}
     - _ReflectionColor: {r: 0.95283014, g: 0.9123799, b: 0.9123799, a: 1}

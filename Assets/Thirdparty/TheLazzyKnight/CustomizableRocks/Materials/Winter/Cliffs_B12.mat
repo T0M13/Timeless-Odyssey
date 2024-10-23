@@ -17,7 +17,6 @@ Material:
   - _COVERAGESAMPLING_UV
   - _DETAILSENABLE
   - _MICRODETAILS_ENABLE
-  - _USE_COVERAGE
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -117,12 +116,12 @@ Material:
     - _Contrast: 0
     - _CoverageAmount: 0.313
     - _CoverageCavity: 0.63
-    - _CoverageSmoothness: 0.824
+    - _CoverageSmoothness: 0.655
     - _CoverageTiling: 15
     - _DETAILSENABLE: 1
     - _Details_Enable: 1
-    - _Details_Intensity: 7.1
-    - _Details_Tiling: 3.73
+    - _Details_Intensity: 7.9
+    - _Details_Tiling: 0.45
     - _DirtTiling: 4
     - _MICRODETAILS_ENABLE: 1
     - _MacroDetails: 0
@@ -130,8 +129,8 @@ Material:
     - _Macrodetails_Tiling: 3.2
     - _MicroDetails: 1
     - _Microdetails_Enable: 1
-    - _Microdetails_Intensity: 0.46
-    - _Microdetails_Tiling: 2.63
+    - _Microdetails_Intensity: 0.88
+    - _Microdetails_Tiling: 0.1
     - _NONSQUARETEX: 0
     - _Position: 0.43
     - _QueueControl: 0
@@ -151,7 +150,7 @@ Material:
     - _TearTiling: 0
     - _TexTilingIndex: 1
     - _TopLight: 1
-    - _USE_COVERAGE: 1
+    - _USE_COVERAGE: 0
     - _UseCoverage: 1
     m_Colors:
     - _AO_Col: {r: 0.6886792, g: 0.6848958, b: 0.67893374, a: 1}

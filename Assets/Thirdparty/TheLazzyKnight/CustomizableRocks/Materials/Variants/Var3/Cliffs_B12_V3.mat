@@ -16,6 +16,7 @@ Material:
   - _AO_TYPE_DIRT
   - _COVERAGESAMPLING_UV
   - _DETAILSENABLE
+  - _MICRODETAILS_ENABLE
   - _USE_COVERAGE
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -114,16 +115,16 @@ Material:
     - _BlenderTest: 1
     - _COVERAGESAMPLING: 0
     - _Contrast: 0.632
-    - _CoverageAmount: 0.134
-    - _CoverageCavity: 0.536
-    - _CoverageSmoothness: 0.344
+    - _CoverageAmount: 0
+    - _CoverageCavity: 0.623
+    - _CoverageSmoothness: 0
     - _CoverageTiling: 4
     - _DETAILSENABLE: 1
     - _Details_Enable: 0
     - _Details_Intensity: 0.22
     - _Details_Tiling: 0.91
     - _DirtTiling: 0.73
-    - _MICRODETAILS_ENABLE: 0
+    - _MICRODETAILS_ENABLE: 1
     - _MacroDetails: 0
     - _Macrodetails_Intensity: 6
     - _Macrodetails_Tiling: 3.2

@@ -13,7 +13,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _AO_TYPE_DIRT
+  - _AO_TYPE_AO
   - _COVERAGESAMPLING_UV
   - _DETAILSENABLE
   - _MICRODETAILS_ENABLE
@@ -110,7 +110,7 @@ Material:
     - _AO_Contrast: 0.842
     - _AO_Pos: 0.734
     - _AO_Possition: 0.68
-    - _AO_TYPE: 1
+    - _AO_TYPE: 0
     - _AlbedoTiling: 1.25
     - _BlenderTest: 1
     - _COVERAGESAMPLING: 0
